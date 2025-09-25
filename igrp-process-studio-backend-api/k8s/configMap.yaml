@@ -15,7 +15,7 @@ data:
   #MANAGEMENT_ENDPOINTS_WEB_EXPOSURE_INCLUDE: "health,info"
   #SERVICE_NAME: "igrp-platform-process-studio-service"
   SERVICE_PORT: "8080"
-  #SERVICE_PROFILE: "development"
+  SPRING_ACTIVE_PROFILE: "production"   # default application.properties
 
 
 

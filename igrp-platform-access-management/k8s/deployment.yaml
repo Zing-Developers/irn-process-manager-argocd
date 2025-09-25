@@ -31,34 +31,18 @@ spec:
               value: "https://${{igrp-iam-keycloak-ztlw.RAILWAY_PUBLIC_DOMAIN}}/realms/igrp"
             - name: ENABLE_SWAGGER
               value: "true"
-            - name: EUREKA_CLIENT_ENABLED
-              value: "true"
-            - name: EUREKA_CLIENT_HEALTHCHECK_ENABLED
-              value: "true"
-            - name: EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE
-              value: "https://${{igrp-cloud-eureka-NApG.RAILWAY_PUBLIC_DOMAIN}}/eureka/"
-            - name: EUREKA_INSTANCE_HOSTNAME
-              value: "${{RAILWAY_PUBLIC_DOMAIN}}"
-            - name: EUREKA_INSTANCE_NON_SECURE_PORT_ENABLED
-              value: "false"
-            - name: EUREKA_INSTANCE_PREFER_IP_ADDRESS
-              value: "false"
-            - name: EUREKA_INSTANCE_SECURE_PORT
-              value: "443"
-            - name: EUREKA_INSTANCE_SECURE_PORT_ENABLED
-              value: "true"
-            - name: IGRP_KEYCLOAK_CLIENT_ID
-              value: "access-management"
-            - name: IGRP_KEYCLOAK_CLIENT_SECRET
-              value: "FTpKJk9kIT2LBCpzIAzCDZfHfjbqzWCy"
-            - name: IGRP_KEYCLOAK_GRANT_TYPE
-              value: "client_credentials"
-            - name: IGRP_KEYCLOAK_REALM
-              value: "igrp"
-            - name: IGRP_KEYCLOAK_SERVER_URL
-              value: "https://${{igrp-iam-keycloak-ztlw.RAILWAY_PUBLIC_DOMAIN}}"
-            - name: MANAGEMENT_ENDPOINTS_WEB_EXPOSURE_INCLUDE
-              value: "health,info"
+            #- name: IGRP_KEYCLOAK_CLIENT_ID      apenas no .env.example
+            #  value: "access-management"
+            #- name: IGRP_KEYCLOAK_CLIENT_SECRET     apenas no .env.example
+            #  value: "FTpKJk9kIT2LBCpzIAzCDZfHfjbqzWCy"
+            #- name: IGRP_KEYCLOAK_GRANT_TYPE         apenas no .env.example
+            #  value: "client_credentials"
+            #- name: IGRP_KEYCLOAK_REALM          apenas no .env.example
+            #  value: "igrp"
+            #- name: IGRP_KEYCLOAK_SERVER_URL       apenas no .env.example
+            #  value: "https://${{igrp-iam-keycloak-ztlw.RAILWAY_PUBLIC_DOMAIN}}"
+            #- name: MANAGEMENT_ENDPOINTS_WEB_EXPOSURE_INCLUDE      não existe
+            #  value: "health,info"
             - name: MINIO_ACCESS_KEY
               value: "${{minio-bucket-FNSX.MINIO_ROOT_USER}}"
             - name: MINIO_BUCKET_NAME
@@ -71,8 +55,8 @@ spec:
               value: "false"
             - name: MINIO_URL
               value: "${{minio-bucket-FNSX.RAILWAY_PRIVATE_DOMAIN}}"
-            - name: OTEL_ENABLED
-              value: "false"
+            #- name: OTEL_ENABLED             apenas no .env.example
+            #  value: "false"
             - name: POSTGRES_DATABASE
               value: "${{igrp-database-postgres-2.POSTGRES_DB}}"
             - name: POSTGRES_HOST
@@ -83,14 +67,14 @@ spec:
               value: "${{igrp-database-postgres-2.PGPORT}}"
             - name: POSTGRES_USER
               value: "${{igrp-database-postgres-2.POSTGRES_USER}}"
-            - name: SERVICE_NAME
-              value: "igrp-platform-accessmanagement-service"
+            #- name: SERVICE_NAME            apenas no .env.example
+            #  value: "igrp-platform-accessmanagement-service"
             - name: SERVICE_PORT
               value: "8080"
             - name: SPRING_CLOUD_DISCOVERY_ENABLED
               value: "true"
-            - name: SPRING_DATA_REDIS_URL
-              value: "${{Redis.REDIS_URL}}"
-            - name: SPRING_PROFILES_ACTIVE
-              value: "production"
+            #- name: SPRING_DATA_REDIS_URL       não existe
+            #  value: "${{Redis.REDIS_URL}}"
+            #- name: SPRING_ACTIVE_PROFILE      não existe
+            #  value: "production"
           
