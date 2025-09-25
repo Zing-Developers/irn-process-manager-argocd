@@ -26,52 +26,8 @@ spec:
             limits:
               cpu: "500m"
               memory: "1Gi"
-          env:
-            - name: AUTH_JWT_ISSUER
-              value: "https://${{igrp-iam-keycloak-ztlw.RAILWAY_PUBLIC_DOMAIN}}/realms/igrp_iam"
-            - name: ENABLE_SWAGGER
-              value: "true"
-            - name: EUREKA_CLIENT_ENABLED
-              value: "true"
-            - name: EUREKA_CLIENT_HEALTHCHECK_ENABLED
-              value: "true"
-            - name: EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE
-              value: "https://${{igrp-cloud-eureka-NApG.RAILWAY_PUBLIC_DOMAIN}}/eureka/"
-            - name: EUREKA_INSTANCE_HOSTNAME
-              value: "${{RAILWAY_PUBLIC_DOMAIN}}"
-            - name: EUREKA_INSTANCE_NON_SECURE_PORT_ENABLED
-              value: "false"
-            - name: EUREKA_INSTANCE_PREFER_IP_ADDRESS
-              value: "false"
-            - name: EUREKA_INSTANCE_SECURE_PORT
-              value: "443"
-            - name: EUREKA_INSTANCE_SECURE_PORT_ENABLED
-              value: "true"
-            - name: IGRP_PROCESS_ENGINE_BASE_URL
-              value: "https://${{igrp-process-management-backend-api-quaV.RAILWAY_PUBLIC_DOMAIN}}"
-            - name: KUBERNETES_DISCOVERY_ENABLED
-              value: "false"
-            - name: LOGGING_LEVEL_APP
-              value: "DEBUG"
-            - name: LOGGING_LEVEL_ROOT
-              value: "INFO"
-            - name: LOGGING_LEVEL_SPRING_WEB
-              value: "DEBUG"
-            - name: MANAGEMENT_ENDPOINTS_WEB_EXPOSURE_INCLUDE
-              value: "health,info"
-            - name: POSTGRES_DATABASE
-              value: "${{igrp-process-studio-postgres-J1mD.POSTGRES_DB}}"
-            - name: POSTGRES_HOST
-              value: "${{igrp-process-studio-postgres-J1mD.PGHOST}}"
-            - name: POSTGRES_PASSWORD
-              value: "${{igrp-process-studio-postgres-J1mD.POSTGRES_PASSWORD}}"
-            - name: POSTGRES_PORT
-              value: "${{igrp-process-studio-postgres-J1mD.PGPORT}}"
-            - name: POSTGRES_USER
-              value: "${{igrp-process-studio-postgres-J1mD.POSTGRES_USER}}"
-            - name: SERVICE_NAME
-              value: "igrp-platform-process-studio-service"
-            - name: SERVICE_PORT
-              value: "8080"
-            - name: SERVICE_PROFILE
-              value: "development"
+          envFrom:
+            - configMapRef:
+                name: irn-studio-backend-conf
+            - secretRef:
+                name: irn-studio-backend-secret
