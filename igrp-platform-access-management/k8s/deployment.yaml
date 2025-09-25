@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: access-management
+  name: igrp-platform-access-management
   labels:
-    app: access-management
+    app: igrp-platform-access-management
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: access-management
+      app: igrp-platform-access-management
   template:
     metadata:
       labels:
-        app: access-management
+        app: igrp-platform-access-management
     spec:
       containers:
-        - name: access-management
+        - name: igrp-platform-access-management
           image: registry.nosi.cv/igrp/access-management-api:latest
           ports:
             - containerPort: 8080

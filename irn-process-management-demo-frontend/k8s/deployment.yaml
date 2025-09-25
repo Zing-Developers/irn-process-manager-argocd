@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: access-management
+  name: irn-process-management-demo-frontend
   labels:
-    app: access-management
+    app: irn-process-management-demo-frontend
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: access-management
+      app: irn-process-management-demo-frontend
   template:
     metadata:
       labels:
-        app: access-management
+        app: irn-process-management-demo-frontend
     spec:
       containers:
-        - name: access-management
+        - name: irn-process-management-demo-frontend
           image: registry.nosi.cv/igrp/access-management-api:latest
           ports:
             - containerPort: 8080

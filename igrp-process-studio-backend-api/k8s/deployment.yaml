@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: spring-engine
+  name: igrp-process-studio-backend-api
   labels:
-    app: spring-engine
+    app: igrp-process-studio-backend-api
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: spring-engine
+      app: igrp-process-studio-backend-api
   template:
     metadata:
       labels:
-        app: spring-engine
+        app: igrp-process-studio-backend-api
     spec:
       containers:
-        - name: spring-engine
-          image: ${REGISTRY_URL}/${REGISTRY_PROJECT}/spring-engine:${RESOURCE_NAME_FINAL}
+        - name: igrp-process-studio-backend-api
+          image: ${REGISTRY_URL}/${REGISTRY_PROJECT}/igrp-process-studio-backend-api:${RESOURCE_NAME_FINAL}
           ports:
             - containerPort: 8080
           resources:

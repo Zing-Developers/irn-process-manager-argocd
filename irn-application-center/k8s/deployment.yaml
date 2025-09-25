@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: access-management
+  name: irn-application-center
   labels:
-    app: access-management
+    app: irn-application-center
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: access-management
+      app: irn-application-center
   template:
     metadata:
       labels:
-        app: access-management
+        app: irn-application-center
     spec:
       containers:
-        - name: access-management
+        - name: irn-application-center
           image: registry.nosi.cv/igrp/access-management-api:latest
           ports:
             - containerPort: 8080

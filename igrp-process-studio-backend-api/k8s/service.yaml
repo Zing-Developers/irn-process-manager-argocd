@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: spring-engine-service
+  name: igrp-process-studio-backend-api-service
   labels:
-    app: spring-engine
+    app: igrp-process-studio-backend-api
 spec:
   selector:
-    app: spring-engine
+    app: igrp-process-studio-backend-api
   ports:
     - protocol: TCP
       port: 8080

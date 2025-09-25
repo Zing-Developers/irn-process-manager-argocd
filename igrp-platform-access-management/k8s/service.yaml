@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: access-management-service
+  name: igrp-platform-access-management-service
   labels:
-    app: access-management
+    app: igrp-platform-access-management
 spec:
   selector:
-    app: access-management
+    app: igrp-platform-access-management
   ports:
     - protocol: TCP
       port: 8080

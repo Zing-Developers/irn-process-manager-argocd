@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: spring-engine
+  name: igrp-process-management-backend-api
   labels:
-    app: spring-engine
+    app: igrp-process-management-backend-api
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: spring-engine
+      app: igrp-process-management-backend-api
   template:
     metadata:
       labels:
-        app: spring-engine
+        app: igrp-process-management-backend-api
     spec:
       containers:
-        - name: spring-engine
+        - name: igrp-process-management-backend-api
           image: ${REGISTRY_URL}/${REGISTRY_PROJECT}/spring-engine:${RESOURCE_NAME_FINAL}
           ports:
             - containerPort: 8080
