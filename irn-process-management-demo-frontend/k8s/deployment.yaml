@@ -27,10 +27,39 @@ spec:
               cpu: "500m"
               memory: "1Gi"
           env:
-            - name: SPRING_DATASOURCE_URL
-              value: "jdbc:postgresql://iam-cnpg-cluster-rw:5432/db_igrp_iam"
-            - name: SPRING_DATASOURCE_USERNAME
-              value: "postgres"
-            - name: SPRING_DATASOURCE_PASSWORD
-              value: "postgres"
-          
+            env:
+            - name: API_GATEWAY
+              value: "https://${igrp-cloud-gateway-iE5d.RAILWAY_PUBLIC_DOMAIN}/igrp-platform-process-management"
+            - name: IGRP_APP_BASE_PATH
+              value: ""
+            - name: IGRP_APP_CENTER_URL
+              value: "https://${igrp-application-center.RAILWAY_PUBLIC_DOMAIN}"
+            - name: IGRP_APP_CODE
+              value: "APP_IGRP_CENTER"
+            - name: IGRP_APP_HOME_SLUG
+              value: "/fila-de-trabalho"
+            - name: IGRP_APP_MANAGER_API
+              value: "https://${igrp-cloud-gateway-iE5d.RAILWAY_PUBLIC_DOMAIN}/igrp-access-management"
+            - name: IGRP_APP_NAME_DESCRIPTION
+              value: "YOUR APP DESCRIPTION NAME"
+            - name: IGRP_LOGIN_URL
+              value: "/login"
+            - name: IGRP_LOGOUT_URL
+              value: "/logout"
+            - name: IGRP_MINIO_URL
+              value: "https://${minio-bucket-FNSX.RAILWAY_PUBLIC_DOMAIN}"
+            - name: IGRP_NEXTAUTH_CALLBACK
+              value: ""
+            - name: IGRP_PREVIEW_MODE
+              value: "false"
+            - name: KEYCLOAK_CLIENT_ID
+              value: "access-management"
+            - name: KEYCLOAK_CLIENT_SECRET
+              value: "FTpKJk9kIT2LBCpzIAzCDZfHfjbqzWCy"
+            - name: KEYCLOAK_ISSUER
+              value: "https://${igrp-iam-keycloak-ztlw.RAILWAY_PUBLIC_DOMAIN}/realms/igrp"
+            - name: NEXTAUTH_SECRET
+              value: "AYNnFncwwTZSqlXzfuaYNpZSkHieaIxa"
+            - name: NEXTAUTH_URL
+              value: "https://${RAILWAY_PUBLIC_DOMAIN}"
+

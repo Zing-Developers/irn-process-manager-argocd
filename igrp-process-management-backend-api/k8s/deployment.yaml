@@ -27,9 +27,57 @@ spec:
               cpu: "500m"
               memory: "1Gi"
           env:
-            - name: SPRING_DATASOURCE_URL
-              value: "jdbc:postgresql://<postgres-service-name>:5432/mydatabase"
-            - name: SPRING_DATASOURCE_USERNAME
-              value: "myuser"
-            - name: SPRING_DATASOURCE_PASSWORD
-              value: "mypassword"
+            - name: AUTH_JWT_ISSUER
+              value: "https://${{igrp-iam-keycloak-ztlw.RAILWAY_PUBLIC_DOMAIN}}/realms/igrp_iam"
+            - name: ENABLE_SWAGGER
+              value: "true"
+            - name: EUREKA_CLIENT_ENABLED
+              value: "true"
+            - name: EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE
+              value: "https://${{igrp-cloud-eureka-NApG.RAILWAY_PUBLIC_DOMAIN}}/eureka/"
+            - name: EUREKA_INSTANCE_HOSTNAME
+              value: "${{RAILWAY_PUBLIC_DOMAIN}}"
+            - name: EUREKA_INSTANCE_NON_SECURE_PORT_ENABLED
+              value: "false"
+            - name: EUREKA_INSTANCE_PREFER_IP_ADDRESS
+              value: "false"
+            - name: EUREKA_INSTANCE_SECURE_PORT
+              value: "443"
+            - name: EUREKA_INSTANCE_SECURE_PORT_ENABLED
+              value: "true"
+            - name: IGRP_MAIL_DEFAULT_FROM
+              value: "no-reply@igrp.cv"
+            - name: LOGGING_LEVEL_APP
+              value: "DEBUG"
+            - name: LOGGING_LEVEL_ROOT
+              value: "INFO"
+            - name: LOGGING_LEVEL_SPRING_WEB
+              value: "DEBUG"
+            - name: POSTGRES_DATABASE
+              value: "${{igrp-process-runtime-postgres-o66-.POSTGRES_DB}}"
+            - name: POSTGRES_HOST
+              value: "${{igrp-process-runtime-postgres-o66-.PGHOST}}"
+            - name: POSTGRES_PASSWORD
+              value: "${{igrp-process-runtime-postgres-o66-.POSTGRES_PASSWORD}}"
+            - name: POSTGRES_PORT
+              value: "${{igrp-process-runtime-postgres-o66-.PGPORT}}"
+            - name: POSTGRES_USER
+              value: "${{igrp-process-runtime-postgres-o66-.POSTGRES_USER}}"
+            - name: SERVICE_NAME
+              value: "igrp-process-management-service"
+            - name: SERVICE_PORT
+              value: "8080"
+            - name: SERVICE_PROFILE
+              value: "development"
+            - name: SPRING_MAIL_HOST
+              value: "smtp.gmail.com"
+            - name: SPRING_MAIL_PASSWORD
+              value: "password"
+            - name: SPRING_MAIL_PORT
+              value: "587"
+            - name: SPRING_MAIL_SMTP_AUTH
+              value: "true"
+            - name: SPRING_MAIL_SMTP_STARTTLS_ENABLE
+              value: "true"
+            - name: SPRING_MAIL_USERNAME
+              value: "user@gmail.com"
