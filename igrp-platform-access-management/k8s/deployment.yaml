@@ -92,5 +92,5 @@ spec:
             - name: SPRING_DATA_REDIS_URL
               value: "${{Redis.REDIS_URL}}"
             - name: SPRING_PROFILES_ACTIVE
-              value: "development"
+              value: "production"
           
