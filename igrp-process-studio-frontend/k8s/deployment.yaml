@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: igrp-process-studio-frontend
-          image: ${REGISTRY_URL}/${REGISTRY_PROJECT}/${REGISTRY_IMAGE}:${REGISTRY_TAG}
+          image: irnzing/irn:igrp-process-studio-frontend
           ports:
             - containerPort: 80
           resources:

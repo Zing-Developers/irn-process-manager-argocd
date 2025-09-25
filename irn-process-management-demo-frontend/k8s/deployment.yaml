@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: irn-process-management-demo-frontend
-          image: registry.nosi.cv/igrp/access-management-api:latest
+          image: irnzing/irn:irn-process-management-demo-frontend
           ports:
             - containerPort: 8080
           resources:

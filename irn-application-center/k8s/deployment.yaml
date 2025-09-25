@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: irn-application-center
-          image: registry.nosi.cv/igrp/access-management-api:latest
+          image: irnzing/irn:igrp-application-center
           ports:
             - containerPort: 8080
           resources:

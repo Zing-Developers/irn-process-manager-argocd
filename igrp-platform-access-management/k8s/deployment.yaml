@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: igrp-platform-access-management
-          image: registry.nosi.cv/igrp/access-management-api:latest
+          image: irnzing/irn:igrp-platform-access-management
           ports:
             - containerPort: 8080
           resources:

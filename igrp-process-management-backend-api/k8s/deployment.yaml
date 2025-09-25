@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: igrp-process-management-backend-api
-          image: ${REGISTRY_URL}/${REGISTRY_PROJECT}/spring-engine:${RESOURCE_NAME_FINAL}
+          image: irnzing/irn:igrp-process-management-backend-api
           ports:
             - containerPort: 8080
           resources:
