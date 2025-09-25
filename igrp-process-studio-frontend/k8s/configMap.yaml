@@ -4,21 +4,21 @@ metadata:
   name: irn-studio-frontend-conf
   namespace: TO BE DEFINED
 data:
-  API_GATEWAY: "https://${{igrp-cloud-gateway-iE5d.RAILWAY_PUBLIC_DOMAIN}}/igrp-platform-process-management-studio"
+  API_GATEWAY: "TO BE DEFINED - igrp-cloud-gateway_PUBLIC_DOMAIN/igrp-platform-process-management-studio"
   IGRP_APP_BASE_PATH: ""
-  IGRP_APP_CENTER_URL: "https://${{igrp-application-center.RAILWAY_PUBLIC_DOMAIN}}"
+  IGRP_APP_CENTER_URL: "TO BE DEFINED - igrp-application-center_PUBLIC_DOMAIN"
   IGRP_APP_CODE: "demo"
   IGRP_APP_HOME_SLUG: "/process"
-  IGRP_APP_MANAGER_API: "https://${{igrp-cloud-gateway-iE5d.RAILWAY_PUBLIC_DOMAIN}}/igrp-access-management"
+  IGRP_APP_MANAGER_API: "TO BE DEFINED - igrp-cloud-gateway_PUBLIC_DOMAIN/igrp-access-management"
   IGRP_APP_NAME_DESCRIPTION: "YOUR APP DESCRIPTION NAME"
   IGRP_LOGIN_URL: "/login"         # apenas no .env-examples
   IGRP_LOGOUT_URL: "/logout"        # apenas no .env-examples
-  IGRP_NEXTAUTH_CALLBACK: "https://${{RAILWAY_PUBLIC_DOMAIN}}/api/auth/callback"
+  IGRP_NEXTAUTH_CALLBACK: "TO BE DEFINED - PUBLIC_DOMAIN/api/auth/callback"
   IGRP_PREVIEW_MODE: "true"
   
-  KEYCLOAK_ISSUER: "https://${{igrp-iam-keycloak-ztlw.RAILWAY_PUBLIC_DOMAIN}}/realms/igrp"
-  NEXT_PUBLIC_API_GATEWAY: "https://${{igrp-cloud-gateway-iE5d.RAILWAY_PUBLIC_DOMAIN}}"     # não existe
-  NEXTAUTH_URL: "https://${{RAILWAY_PUBLIC_DOMAIN}}/api/auth"     #  apenas no .env-examples
+  KEYCLOAK_ISSUER: "TO BE DEFINED - igrp-iam-keycloak_PUBLIC_DOMAIN/realms/igrp"
+  NEXT_PUBLIC_API_GATEWAY: "TO BE DEFINED - igrp-cloud-gateway_PUBLIC_DOMAIN"     # não existe
+  NEXTAUTH_URL: "TO BE DEFINED - PUBLIC_DOMAIN/api/auth"     #  apenas no .env-examples
 
 
 

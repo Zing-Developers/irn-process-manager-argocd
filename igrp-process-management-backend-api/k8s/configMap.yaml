@@ -4,7 +4,7 @@ metadata:
   name: irn-process-management-backend-conf
   namespace: TO BE DEFINED
 data:
-  AUTH_JWT_ISSUER: "https://${igrp-iam-keycloak-ztlw.RAILWAY_PUBLIC_DOMAIN}/realms/igrp_iam"
+  AUTH_JWT_ISSUER: "TO BE DEFINED - igrp-iam-keycloak_PUBLIC_DOMAIN/realms/igrp_iam"
   ENABLE_SWAGGER: "true"
   IGRP_MAIL_DEFAULT_FROM: "no-reply@igrp.cv"
   LOGGING_LEVEL_APP: "DEBUG"
