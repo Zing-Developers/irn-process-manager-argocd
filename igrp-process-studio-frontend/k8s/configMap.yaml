@@ -15,7 +15,7 @@ data:
   IGRP_LOGOUT_URL: "/logout"        # apenas no .env-examples
   IGRP_NEXTAUTH_CALLBACK: "https://${{RAILWAY_PUBLIC_DOMAIN}}/api/auth/callback"
   IGRP_PREVIEW_MODE: "true"
-  KEYCLOAK_CLIENT_ID: "access-management"
+  
   KEYCLOAK_ISSUER: "https://${{igrp-iam-keycloak-ztlw.RAILWAY_PUBLIC_DOMAIN}}/realms/igrp"
   NEXT_PUBLIC_API_GATEWAY: "https://${{igrp-cloud-gateway-iE5d.RAILWAY_PUBLIC_DOMAIN}}"     # não existe
   NEXTAUTH_URL: "https://${{RAILWAY_PUBLIC_DOMAIN}}/api/auth"     #  apenas no .env-examples

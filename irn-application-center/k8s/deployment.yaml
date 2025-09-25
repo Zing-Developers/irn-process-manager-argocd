@@ -26,34 +26,8 @@ spec:
             limits:
               cpu: "500m"
               memory: "1Gi"
-          env:
-            #- name: IGRP_APP_BASE_PATH         apenas no .env.example
-            #  value: ""
-            - name: IGRP_APP_CODE
-              value: "APP_IGRP_CENTER"
-            #- name: IGRP_APP_HOME_SLUG         apenas no .env.example
-            #  value: ""
-            - name: IGRP_APP_MANAGER_API
-              value: "https://${{igrp-cloud-gateway-iE5d.RAILWAY_PUBLIC_DOMAIN}}/igrp-access-management"
-            - name: IGRP_APP_NAME_DESCRIPTION
-              value: "YOUR APP DESCRIPTION NAME"
-            - name: IGRP_LOGIN_URL
-              value: "/login"
-            - name: IGRP_LOGOUT_URL
-              value: "/logout"
-            - name: IGRP_MINIO_URL
-              value: ""
-            - name: IGRP_NEXTAUTH_CALLBACK
-              value: ""
-            - name: IGRP_PREVIEW_MODE
-              value: "false"
-            - name: KEYCLOAK_CLIENT_ID
-              value: "access-management"
-            - name: KEYCLOAK_CLIENT_SECRET
-              value: "FTpKJk9kIT2LBCpzIAzCDZfHfjbqzWCy"
-            - name: KEYCLOAK_ISSUER
-              value: "https://${{igrp-iam-keycloak-ztlw.RAILWAY_PUBLIC_DOMAIN}}/realms/igrp"
-            - name: NEXTAUTH_SECRET
-              value: "LlCNqCMrPIIXdLDQhTlGgADscUrXCloy"
-            - name: NEXTAUTH_URL
-              value: "https://${{RAILWAY_PUBLIC_DOMAIN}}"
+          envFrom:
+            - configMapRef:
+                name: irn-application-center-conf
+            - secretRef:
+                name: irn-application-center-secret
