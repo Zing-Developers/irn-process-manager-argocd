@@ -3,10 +3,10 @@ kind: Service
 metadata:
   name: igrp-process-studio-frontend-service 
   labels:
-    app: igrp-process-studio-frontend-app 
+    app: igrp-process-studio-frontend
 spec:
   selector:
-    app: igrp-process-studio-frontend-app 
+    app: igrp-process-studio-frontend
   ports:
     - protocol: TCP
       port: 80  

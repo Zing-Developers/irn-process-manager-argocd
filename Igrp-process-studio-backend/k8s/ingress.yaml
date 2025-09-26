@@ -1,18 +1,18 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: igrp-process-studio-frontend-ingress 
+  name: Igrp-process-studio-backend-ingress
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /$1
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
     - host: "to_be_defined"
       http:
         paths:
-          - path: /endpoint/?(.*)
+          - path: /
             pathType: Prefix
             backend:
               service:
-                name: igrp-process-studio-frontend-service  
+                name: Igrp-process-studio-backend-service
                 port:
-                  number: 80
+                  number: 8080

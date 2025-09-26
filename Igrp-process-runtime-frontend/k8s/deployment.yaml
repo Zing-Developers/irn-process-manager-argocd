@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: igrp-process-studio-frontend
+  name: Igrp-process-runtime-frontend
   labels:
-    app: igrp-process-studio-frontend
+    app: Igrp-process-runtime-frontend
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: igrp-process-studio-frontend
+      app: Igrp-process-runtime-frontend
   template:
     metadata:
       labels:
-        app: igrp-process-studio-frontend
+        app: Igrp-process-runtime-frontend
     spec:
       containers:
-        - name: igrp-process-studio-frontend
-          image: docker.io/irnzing/irn:igrp-process-studio-frontend
+        - name: Igrp-process-runtime-frontend
+          image: docker.io/irnzing/irn:igrp-process-management-frontend
           ports:
             - containerPort: 80
           resources:
@@ -28,6 +28,6 @@ spec:
               memory: "1Gi"
           envFrom:
             - configMapRef:
-                name: igrp-process-studio-frontend-conf
+                name: Igrp-process-runtime-frontend-conf
             - secretRef:
-                name: igrp-process-studio-frontend-secret
+                name: Igrp-process-runtime-frontend-secret

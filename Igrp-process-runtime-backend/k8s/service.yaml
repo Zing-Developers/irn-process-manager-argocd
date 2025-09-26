@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: Igrp-process-runtime-backend-service
+  labels:
+    app: Igrp-process-runtime-backend
+spec:
+  selector:
+    app: Igrp-process-runtime-backend
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+  type: ClusterIP

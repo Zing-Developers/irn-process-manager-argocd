@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: irn-process-management-frontend-service
+  labels:
+    app: irn-process-management-frontend
+spec:
+  selector:
+    app: irn-process-management-frontend
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+  type: ClusterIP
