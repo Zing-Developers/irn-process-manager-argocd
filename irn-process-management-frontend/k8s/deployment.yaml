@@ -2,10 +2,11 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: irn-process-management-frontend
+  namespace: irn-process-management-frontend
   labels:
     app: irn-process-management-frontend
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: irn-process-management-frontend
@@ -18,14 +19,7 @@ spec:
         - name: irn-process-management-frontend
           image: docker.io/irnzing/irn:igrp-process-management-demo-frontend
           ports:
-            - containerPort: 8080
-          resources:
-            requests:
-              cpu: "250m"
-              memory: "512Mi"
-            limits:
-              cpu: "500m"
-              memory: "1Gi"
+            - containerPort: 3001
           envFrom:
             - configMapRef:
                 name: irn-process-management-frontend-conf

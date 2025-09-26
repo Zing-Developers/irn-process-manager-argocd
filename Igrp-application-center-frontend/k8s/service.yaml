@@ -1,14 +1,15 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: Igrp-application-center-frontend-service
+  name: igrp-application-center-frontend-service
+  namespace: igrp-application-center-frontend
   labels:
-    app: irn-application-center
+    app: igrp-application-center-frontend
 spec:
   selector:
-    app: irn-application-center
+    app: igrp-application-center-frontend
   ports:
     - protocol: TCP
-      port: 8080
-      targetPort: 8080
+      port: 80
+      targetPort: 3001
   type: ClusterIP

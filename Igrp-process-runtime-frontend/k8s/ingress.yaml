@@ -1,18 +1,20 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: Igrp-process-runtime-frontend-ingress 
+  name: igrp-process-runtime-frontend-ingress
+  namespace: igrp-process-runtime-frontend
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /$1
+    kubernetes.io/ingress.class: nginx
 spec:
+  ingressClassName: nginx
   rules:
-    - host: "to_be_defined" 
+    - host: igrp-process-runtime-frontend.zingdevelopers.com
       http:
         paths:
-          - path: /endpoint/?(.*)
+          - path: /
             pathType: Prefix
             backend:
               service:
-                name: Igrp-process-runtime-frontend-service  
+                name: igrp-process-runtime-frontend-service
                 port:
                   number: 80

@@ -1,33 +1,28 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: Igrp-process-studio-backend
+  name: igrp-process-studio-backend
+  namespace: igrp-process-studio-backend
   labels:
-    app: Igrp-process-studio-backend
+    app: igrp-process-studio-backend
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
-      app: Igrp-process-studio-backend
+      app: igrp-process-studio-backend
   template:
     metadata:
       labels:
-        app: Igrp-process-studio-backend
+        app: igrp-process-studio-backend
     spec:
       containers:
-        - name: Igrp-process-studio-backend
+        - name: igrp-process-studio-backend
           image: docker.io/irnzing/irn:igrp-process-studio-backend-api
+          imagePullPolicy: Never
           ports:
             - containerPort: 8080
-          resources:
-            requests:
-              cpu: "250m"
-              memory: "512Mi"
-            limits:
-              cpu: "500m"
-              memory: "1Gi"
           envFrom:
             - configMapRef:
-                name: Igrp-process-studio-backend-conf
+                name: igrp-process-studio-backend-conf
             - secretRef:
-                name: Igrp-process-studio-backend-secret
+                name: igrp-process-studio-backend-secret

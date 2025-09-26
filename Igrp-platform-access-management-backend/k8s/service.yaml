@@ -1,12 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: Igrp-platform-access-management-backend-service
+  name: igrp-platform-access-management-backend-service
+  namespace: igrp-platform-access-management-backend
   labels:
-    app: Igrp-platform-access-management-backend
+    app: igrp-platform-access-management-backend
 spec:
   selector:
-    app: Igrp-platform-access-management-backend
+    app: igrp-platform-access-management-backend
   ports:
     - protocol: TCP
       port: 8080

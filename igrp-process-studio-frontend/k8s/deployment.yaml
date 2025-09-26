@@ -2,10 +2,11 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: igrp-process-studio-frontend
+  namespace: igrp-process-studio-frontend
   labels:
     app: igrp-process-studio-frontend
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: igrp-process-studio-frontend
@@ -18,14 +19,7 @@ spec:
         - name: igrp-process-studio-frontend
           image: docker.io/irnzing/irn:igrp-process-studio-frontend
           ports:
-            - containerPort: 80
-          resources:
-            requests:
-              cpu: "250m"
-              memory: "512Mi"
-            limits:
-              cpu: "500m"
-              memory: "1Gi"
+            - containerPort: 3001
           envFrom:
             - configMapRef:
                 name: igrp-process-studio-frontend-conf

@@ -2,11 +2,13 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: irn-process-management-frontend-ingress
+  namespace: irn-process-management-frontend
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
+    kubernetes.io/ingress.class: nginx
 spec:
+  ingressClassName: nginx
   rules:
-    - host: "to_be_defined"
+    - host: irn-process-management-frontend.zingdevelopers.com
       http:
         paths:
           - path: /
@@ -15,4 +17,4 @@ spec:
               service:
                 name: irn-process-management-frontend-service
                 port:
-                  number: 8080
+                  number: 80
