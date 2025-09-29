@@ -19,7 +19,7 @@ spec:
         - name: igrp-process-studio-frontend
           image: docker.io/irnzing/irn:igrp-process-studio-frontend
           ports:
-            - containerPort: 3001
+            - containerPort: 80
           envFrom:
             - configMapRef:
                 name: igrp-process-studio-frontend-conf
