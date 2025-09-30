@@ -12,13 +12,17 @@ data:
   LOGGING_LEVEL_SPRING_WEB: "DEBUG"
   SERVICE_NAME: "igrp-process-runtime-backend-service"
   SERVICE_PORT: "8080"
-  SPRING_MAIL_HOST: "smtp.gmail.com"
+  MANAGEMENT_ENDPOINTS_WEB_EXPOSURE_INCLUDE: "health,info"
+  SPRING_MAIL_HOST: "sandbox.smtp.mailtrap.io"
   SPRING_MAIL_PORT: "587"
   SPRING_MAIL_SMTP_AUTH: "true"
   SPRING_MAIL_SMTP_STARTTLS_ENABLE: "true"
-  SPRING_MAIL_USERNAME: "user@gmail.com"
+  SPRING_MAIL_USERNAME: "02a71344698e9b"
   SPRING_ACTIVE_PROFILE: "production"
   KUBERNETES_DISCOVERY_ENABLED: "true"
+
+
+
 
 
 

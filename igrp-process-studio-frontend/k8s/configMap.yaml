@@ -4,12 +4,12 @@ metadata:
   name: igrp-process-studio-frontend-conf
   namespace: igrp-process-studio-frontend
 data:
-  API_GATEWAY: "https://apisix.zingdevelopers.com/access-management"
+  API_GATEWAY: "https://apisix.zingdevelopers.com/process-studio"
   IGRP_APP_BASE_PATH: ""
   IGRP_APP_CENTER_URL: "https://igrp-app-center.zingdevelopers.com"
   IGRP_APP_CODE: "demo"
   IGRP_APP_HOME_SLUG: "/process"
-  IGRP_APP_MANAGER_API: "https://apisix.zingdevelopers.com/igrp-access-management"
+  IGRP_APP_MANAGER_API: "https://apisix.zingdevelopers.com/access-management"
   IGRP_APP_NAME_DESCRIPTION: "igrp-process-studio-frontend"
   IGRP_LOGIN_URL: "/login"
   IGRP_LOGOUT_URL: "/logout"
