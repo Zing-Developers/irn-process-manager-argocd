@@ -25,3 +25,19 @@ spec:
                 name: igrp-process-runtime-frontend-conf
             - secretRef:
                 name: igrp-process-runtime-frontend-secret
+          livenessProbe:
+            httpGet:
+              path: /api/health
+              port: 3000
+            initialDelaySeconds: 10   # wait 10s after container start
+            periodSeconds: 15         # check every 15s
+            timeoutSeconds: 3         # fail if no response in 3s
+            failureThreshold: 3       # restart if 3 consecutive fails
+          readinessProbe:
+            httpGet:
+              path: /api/health
+              port: 3000
+            initialDelaySeconds: 5    # readiness checked earlier
+            periodSeconds: 10
+            timeoutSeconds: 3
+            failureThreshold: 3
