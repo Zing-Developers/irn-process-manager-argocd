@@ -24,3 +24,4 @@ data:
   S3_BUCKET_NAME: "igrp"
   S3_PATH_STYLE_ACCESS: "true"
   S3_REGION: "praia"
+  SPRING_JPA_HIBERNATE_DDL_AUTO: "create-drop"
