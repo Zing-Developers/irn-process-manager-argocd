@@ -14,8 +14,8 @@ data:
   IGRP_LOGIN_URL: "/login"
   IGRP_LOGOUT_URL: "/logout"
   IGRP_MINIO_URL: "minio.minio.svc.cluster.local"
-  IGRP_NEXTAUTH_CALLBACK: "igrp-process-runtime-frontend.zingdevelopers.com"
+  IGRP_NEXTAUTH_CALLBACK: "igrp-process-runtime-frontend.zingdevelopers.com/apps/igrp-process-management"
   IGRP_PREVIEW_MODE: "false"
   KEYCLOAK_ISSUER: "https://igrp-kc.zingdevelopers.com/realms/igrp"
-  NEXTAUTH_URL: "https://igrp-process-runtime-frontend.zingdevelopers.com"
+  NEXTAUTH_URL: "https://igrp-process-runtime-frontend.zingdevelopers.com/apps/igrp-process-management"
 
