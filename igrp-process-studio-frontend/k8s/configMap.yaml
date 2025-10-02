@@ -13,7 +13,7 @@ data:
   IGRP_APP_NAME_DESCRIPTION: "igrp-process-studio-frontend"
   IGRP_LOGIN_URL: "/login"
   IGRP_LOGOUT_URL: "/logout"
-  IGRP_NEXTAUTH_CALLBACK: ""
+  IGRP_NEXTAUTH_CALLBACK: "igrp-process-studio-frontend.zingdevelopers.com"
   IGRP_PREVIEW_MODE: "false"
   KEYCLOAK_ISSUER: "https://igrp-kc.zingdevelopers.com/realms/igrp"
   NEXT_PUBLIC_API_GATEWAY: "https://apisix.zingdevelopers.com"
