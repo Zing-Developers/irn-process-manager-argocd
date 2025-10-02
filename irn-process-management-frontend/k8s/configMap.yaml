@@ -4,7 +4,7 @@ metadata:
   name: irn-process-management-frontend-conf
   namespace: irn-process-management-frontend
 data:
-  API_GATEWAY: "https://apisix.zingdevelopers.com/process-runtime"
+  IGRP_PROCESS_API_GATEWAY_BASE_URL: "https://apisix.zingdevelopers.com/process-runtime"
   IGRP_APP_BASE_PATH: ""
   IGRP_APP_CENTER_URL: "https://igrp-app-center.zingdevelopers.com"
   IGRP_APP_CODE: "demo"
