@@ -14,7 +14,7 @@ data:
   IGRP_LOGIN_URL: "/login"
   IGRP_LOGOUT_URL: "/logout"
   IGRP_NEXTAUTH_CALLBACK: ""
-  IGRP_PREVIEW_MODE: "true"
+  IGRP_PREVIEW_MODE: "false"
   KEYCLOAK_ISSUER: "https://igrp-kc.zingdevelopers.com/realms/igrp"
   NEXT_PUBLIC_API_GATEWAY: "https://apisix.zingdevelopers.com"
   NEXTAUTH_URL: "https://igrp-process-studio-frontend.zingdevelopers.com"
