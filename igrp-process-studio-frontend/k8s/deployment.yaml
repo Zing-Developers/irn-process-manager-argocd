@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: igrp-process-studio-frontend
-          image: docker.io/irnzing/irn:igrp-process-studio-frontend
+          image: docker.io/irnzing/irn:igrp-process-studio-frontend-with-basepath
           ports:
             - containerPort: 80
           envFrom:
