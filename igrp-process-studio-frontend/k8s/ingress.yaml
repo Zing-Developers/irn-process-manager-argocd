@@ -18,10 +18,10 @@ spec:
                 name: igrp-process-studio-frontend-service
                 port:
                   number: 80
-          - path: /apps/igrp-process-studio
-            pathType: Prefix
-            backend:
-              service:
-                name: igrp-process-studio-frontend-service
-                port:
-                  number: 80
+          #- path: /apps/igrp-process-studio
+          #  pathType: Prefix
+          #  backend:
+          #    service:
+          #      name: igrp-process-studio-frontend-service
+          #      port:
+          #        number: 80
