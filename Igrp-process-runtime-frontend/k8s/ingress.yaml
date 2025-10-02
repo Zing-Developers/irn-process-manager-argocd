@@ -12,17 +12,7 @@ spec:
     - host: igrp-process-runtime-frontend.zingdevelopers.com
       http:
         paths:
-          # Original root path
           - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: igrp-process-runtime-frontend-service
-                port:
-                  number: 80
-
-          # New path with basePath
-          - path: /apps/igrp-process-studio(/|$)(.*)
             pathType: Prefix
             backend:
               service:
