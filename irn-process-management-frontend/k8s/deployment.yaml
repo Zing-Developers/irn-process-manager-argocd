@@ -28,7 +28,7 @@ spec:
                 name: irn-process-management-frontend-secret
           livenessProbe:
             httpGet:
-              path: /api/health
+              path: /apps/irn-backoffice/api/health
               port: 3000
             initialDelaySeconds: 10   # wait 10s after container start
             periodSeconds: 15         # check every 15s
@@ -36,7 +36,7 @@ spec:
             failureThreshold: 3       # restart if 3 consecutive fails
           readinessProbe:
             httpGet:
-              path: /api/health
+              path: /apps/irn-backoffice/api/health
               port: 3000
             initialDelaySeconds: 5    # readiness checked earlier
             periodSeconds: 10
