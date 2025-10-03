@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: igrp-process-runtime-frontend
-          image: docker.io/irnzing/irn:igrp-process-management-frontend-with-basepath
+          image: docker.io/irnzing/irn:igrp-process-management-frontend
           ports:
             - containerPort: 80
           envFrom:
